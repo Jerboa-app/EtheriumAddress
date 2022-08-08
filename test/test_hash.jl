@@ -10,10 +10,6 @@ in the NIST standard.
 KECCAK256 is split into each section of the algorithm; theta, rho, pi, etc.
 """
 
-@testset "SHA256 test vectors" begin
-   @test SHA256("") == "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-end
-
 @testset "keccak internals" begin
     s = rand([0,1],1600);
     A = keccak256BitsToState(s);
